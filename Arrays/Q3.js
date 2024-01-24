@@ -16,7 +16,6 @@ let value = 81;
 console.log(findSum(arr, value));
 
 // Solution 2.
-
 function findSum2(arr, value) {
   // Sort the array
   arr.sort((a, b) => a - b);

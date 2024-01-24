@@ -1,22 +1,22 @@
 // Solution 1.
 function findProduct2(arr){
-    let productArr = []
-
-    let leftSideProduct = 1
-    for(let i = 0 ; i < arr.length ; i++){
-        let currentproduct =  1
-
-        for(let j = i+1 ; j < arr.length ; j++){
-            currentproduct = currentproduct * arr[j]
-        }
-        productArr.push(currentproduct * leftSideProduct)
-
-        // Update the LeftSideProduct after Each Iteration.
-       leftSideProduct *= arr[i]
-
+  var result = []
+  var left = 1, currentproduct;
+  //To store product of all previous values from currentIndex
+  for(var i=0;i<arr.length;i++){
+    currentproduct = 1
+    //To store current product for index i    
+		//compute product of values to the right of i index of list
+    for(var j=i+1;j<arr.length;j++){
+      currentproduct = currentproduct * arr[j]
     }
+    //currentproduct * product of all values to the left of i index
+    result.push(currentproduct * left)
+    //Updating `left`
+    left = left * arr[i]
+  }
     
-    return productArr
+  return result
 }
 console.log(findProduct2([1,3,4,5]))
 
