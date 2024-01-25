@@ -1,0 +1,17 @@
+Problem Statement 
+Implement a function findSecondMaximum(arr), which returns the second largest element in the array.
+
+Note 1: Input array will contain at least two unique elements.
+
+Note 2: Input array will not contain Number.NEGATIVE_INFINITY value.
+
+Input 
+An array of integers
+
+Output 
+The second largest element in the array
+
+Sample Input #
+[9,2,3,6]
+Sample Output 
+6
