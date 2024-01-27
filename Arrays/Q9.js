@@ -31,13 +31,15 @@ function reArrange2(arr) {
         temp = arr[i];
         arr[i] = arr[leftMostPos];
         arr[leftMostPos] = temp;
+        console.log("Values Swapped", arr[leftMostPos], arr[i]);
       }
       //   Only increment the value of leftMostPos when element is negative.
       leftMostPos++;
+      console.log("Indices after Swapping has done.");
       console.log("LeftMost Index: " + leftMostPos, "Loop Index " + i);
     }
   }
   return arr;
 }
 
-console.log(reArrange2([10, 3, -3, 2, 3 - 11, -31, 11]));
+console.log(reArrange2([10, 3, -2, 3, 5, -3]));
