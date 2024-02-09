@@ -26,17 +26,12 @@ function reArrange2(arr) {
 
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] < 0) {
-      if (i !== leftMostPos) {
-        // Swapping positions of elements
-        temp = arr[i];
-        arr[i] = arr[leftMostPos];
-        arr[leftMostPos] = temp;
-        console.log("Values Swapped", arr[leftMostPos], arr[i]);
-      }
+      // Swapping positions of elements
+      temp = arr[i];
+      arr[i] = arr[leftMostPos];
+      arr[leftMostPos] = temp;
       //   Only increment the value of leftMostPos when element is negative.
       leftMostPos++;
-      console.log("Indices after Swapping has done.");
-      console.log("LeftMost Index: " + leftMostPos, "Loop Index " + i);
     }
   }
   return arr;
