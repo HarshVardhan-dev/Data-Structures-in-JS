@@ -9,12 +9,11 @@ function SperateLine() {
 
 let list = new LinkedList();
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 4; i++) {
   list.insertAtHead(i);
 }
 console.log(list.printList());
 
-list.deleteAtHead();
-console.log(list.printList());
-list.deleteByValue(5);
+list.reverseList();
+
 console.log(list.printList());

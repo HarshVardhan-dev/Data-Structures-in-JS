@@ -13,6 +13,11 @@ module.exports = class LinkedList {
     return this.head;
   }
 
+  setHead(newnode) {
+    this.head = newnode;
+    return this;
+  }
+
   search(value) {
     let Index = this.head;
     while (Index !== null) {
@@ -144,6 +149,48 @@ module.exports = class LinkedList {
       firstNode = firstNode.nextElement;
     }
     firstNode.nextElement = null;
+    return this;
+  }
+
+  // Calculates the Length of the List
+  getlength() {
+    let length = 0;
+    if (this.isEmpty()) {
+      console.log(`List is empty , hence length is ${length}`);
+    }
+
+    let pointer = this.head;
+
+    while (pointer !== null) {
+      pointer = pointer.nextElement;
+      length++;
+    }
+
+    return length;
+  }
+
+  reverseList() {
+    if (this.isEmpty()) {
+      console.log("List is empty , hence cannot be reversed");
+    }
+
+    let previousNode = null;
+    let currentNode = this.head;
+    let nextNode = null;
+
+    while (currentNode !== null) {
+      // Points to the next node in the list
+      nextNode = currentNode.nextElement;
+      // Creates a link between the previous node and the current node
+      currentNode.nextElement = previousNode;
+      // Incremnents the previous node
+      previousNode = currentNode;
+
+      // Increments the current node
+      currentNode = nextNode;
+    }
+    this.setHead(previousNode);
+
     return this;
   }
 };
