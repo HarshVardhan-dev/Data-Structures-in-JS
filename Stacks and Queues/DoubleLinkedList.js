@@ -1,6 +1,4 @@
-"use strict";
-
-const Node = require("./Node2");
+const Node = require("./Node.js");
 
 module.exports = class DoublyLinkedList {
   constructor() {
@@ -10,6 +8,7 @@ module.exports = class DoublyLinkedList {
   }
 
   // Add node to the end of the list
+
   insertTail(item) {
     const newNode = new Node(item);
 
@@ -52,13 +51,18 @@ module.exports = class DoublyLinkedList {
     return nodeToRemove.item;
   }
 
-  firstNode() {
+  getHead() {
     if (!(this.head == null)) {
       return this.head.item;
     } else return null;
   }
 
-  // Return list items
+  tailNode() {
+    if (!(this.head == null)) {
+      return this.tail.item;
+    } else return null;
+  }
+  // // Return list items
 
   toString() {
     const list = [];
