@@ -109,6 +109,10 @@ class Queue {
   dequeue() {
     return this.items.removeHead();
   }
+
+  printQueue() {
+    return this.items.toString();
+  }
 }
 
 module.exports = {

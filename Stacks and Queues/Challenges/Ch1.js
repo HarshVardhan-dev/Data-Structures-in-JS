@@ -1,6 +1,6 @@
 "use strict";
 
-const { Node, DoublyLinkedList, Queue } = require("./ExportIndex");
+const { Queue } = require("./ExportIndex");
 
 function findBin(n) {
   let result = [];
@@ -8,22 +8,17 @@ function findBin(n) {
   var s1, s2;
   myQueue.enqueue("1");
   for (var i = 0; i < n; i++) {
-    console.log("Loop Body Start");
-
-    console.log(`Value to be Dequeued: ${myQueue.getFront()}`);
+    console.log("Que", myQueue.printQueue(), "Que-length", myQueue.size());
     result.push(myQueue.dequeue());
 
+    console.log("resultsArrValue", result[i], "resultsArr", result);
     s1 = result[i] + "0";
     s2 = result[i] + "1";
-    console.log("----------", result[i]);
+
     myQueue.enqueue(s1);
     myQueue.enqueue(s2);
-
-    console.log("Result", result, "s1-->", s1, "s2-->", s2);
-    console.log(
-      "***********",
-      `Completion of ${i + 1}th iteration and value of i is ${i}`
-    );
+    console.log("S1->", s1, "S2->", s2);
+    console.log(`Completed ${i + 1} iteration _____________`);
   }
 
   return result;

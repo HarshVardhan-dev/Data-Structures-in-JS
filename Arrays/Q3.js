@@ -11,6 +11,8 @@ function findSum(arr, value) {
   return false;
 }
 
+let arr2 = [2, 30, 56, 34, 55, 10, 11, 20, 15, 60, 45, 39, 51];
+let value2 = 61;
 let arr = [1, 21, 3, 14, 5, 60, 7, 6];
 let value = 81;
 console.log(findSum(arr, value));
@@ -35,7 +37,7 @@ function findSum2(arr, value) {
     }
   }
 
-  return false;
+  return null;
 }
 
-console.log("Solution 2 ", findSum2(arr, value));
+console.log("Solution 2 ", findSum2(arr2, value2));
