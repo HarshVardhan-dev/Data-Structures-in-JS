@@ -1,0 +1,13 @@
+Challenge2__
+Complexity analysis
+Let’s look at the time and space complexity of this solution:
+
+Time complexity
+
+The time complexity of this solution is O(1)
+ because all operations access array indices directly without resizing.
+
+Space complexity
+
+The space complexity of this solution is O(n)
+, where n is the fixed size of the array used to implement the two stacks

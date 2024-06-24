@@ -18,7 +18,9 @@ function findBin(n) {
     myQueue.enqueue(s1);
     myQueue.enqueue(s2);
     console.log("S1->", s1, "S2->", s2);
-    console.log(`Completed ${i + 1} iteration _____________`);
+
+    console.log(`Completed ${i + 1} iteration `);
+    console.log("-".repeat(100) + "\n");
   }
 
   return result;
